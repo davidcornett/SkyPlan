@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" href="astro.css">
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="box1">
+	<nav class="topnav">
+		  <ul id="nav">
+		    <li>
+		      <a href="home.html" class="currentPage">Home</a>
+		    </li>
+		    <li>
+		      <a href="skyplan.html">Sky Plan</a>
+		    </li>
+		    <li>
+		      <a href="info.html">Information</a>
+		    </li>
+		  </ul>
+		</nav>
+		<span class="target"></span>
+  </div>
+  <div class="box2">
+  	<span id="quote" class="qSpan"></span>
+  	<span id="author" class="qSpan"></span>
+
+  </div>
+  <div class="box3">
+  	<div class="inner-content">
+  		<div class = "text">
+
+
+		  <h2> Sky Plan Tool</h2>
+			<p>
+			Find out the best time of year, and sometimes even the best year, to observe astronomical objects.  
+			Whether you are into astrophotography, planning a star party, or just looking a great view of your 
+			favorite planet or Deep Sky Object, <strong>timing is everything</strong>: 
+			</p>
+			<ul>
+				<li>Planetary close approaches</li>
+				<li>DSO and planetary position in the sky</li>
+				<li>Expected seeing conditions based on historical averages</li>
+				<li>Light pollution in your location</li>
+				<li>Lunar brightness</li>
+			</ul>
+		</div>
+	</div>	
+	  
+  </div>
+
+  <div class="box4">
+
+	<div class="carousel-wrapper">
+
+			 <ul id="carousel" class="carousel">	
+				<h3 id=idea>Observing ideas</h3>
+				<li class="card" id="first">
+					
+					<img class="cardImage" src="carousel images/saturn.jpg" alt="Image cannot be displayed.">
+					<div class="credit">
+						<h3>Saturn</h3> --- <p>
+						Image by <a href="https://pixabay.com/users/wikiimages-1897/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=67672">WikiImages</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=67672">Pixabay</a>
+					</p></div>
+				</li>
+				<li class="card" id="second">
+					<img class="cardImage" src="carousel images/jupiter.jpg" alt="Image cannot be displayed.">
+					<div class="credit">
+						<h3>Jupiter behind Ganymede</h3> --- <p>
+						Image by <a href="https://pixabay.com/users/wikiimages-1897/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=67672">WikiImages</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=67672">Pixabay</a>
+					</p></div>
+				</li>
+				<li class="card" id="third">
+					<img class="cardImage" src="carousel images/milkyway.jpg" alt="Image cannot be displayed.">
+					<div class="credit">
+						<h3>Milky Way</h3> --- <p>
+						Image by <a href="https://pixabay.com/users/wikiimages-1897/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=67504">WikiImages</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=67504">Pixabay</a>
+					</p></div>
+				</li>
+				<li class="card" id="fourth">
+					<img class="cardImage" src="carousel images/m31.jpg" alt="Image cannot be displayed.">
+					<div class="credit">
+						<h3>Andromeda Galaxy</h3> --- <p>
+						Image by <a href="https://pixabay.com/users/nix1111-9746989/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3613931">Kyoung-Sik Choi</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3613931">Pixabay</a>
+					</p></div>
+
+			 </ul>
+
+			 <a class="left" onclick="previousCard()">&#10094;</a>
+	  		 <a class="right" onclick="nextCard()">&#10095;</a>
+
+		</div>
+
+  </div>
+</div>
+
+<script src="underlineShift.js"> </script>
+<script src="carousel.js"></script>
+<script src="quoteGen.js"></script>
+
+
+
+</body>
+</html>

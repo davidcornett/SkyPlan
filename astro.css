@@ -1,0 +1,266 @@
+/*interesting color for future use: #283747 */
+
+body {
+  background-color: black;
+  color: #fff;
+  font: 16px/26px
+   sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+.toggle {
+  /*display: none; */
+}
+
+/*special formatting for current nag bar item*/
+.currentPage {
+  font-size: 30px;
+
+}
+
+/* Citation: Grid Layout modified from: 
+  https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+*/
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /*   grid-auto-rows: 100px; */
+  grid-auto-rows: minmax(75px, auto);
+  column-gap: 20px;
+  row-gap: 1em;
+}
+
+.box1 {
+  grid-column-start: 1; 
+  grid-column-end: 4; 
+  grid-row-start: 1; 
+  grid-row-end: ; 
+
+}
+
+.box2 {
+  padding-top: 20px;
+  grid-column-start: 1; 
+  grid-column-end: 4;
+}
+
+.box3 {
+  display: grid;
+  grid-column-start: 1; 
+  grid-column-end: 2;
+}
+
+.topnav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+ 
+.topnav li:not(:last-child) {
+  margin-right: 20px;
+}
+ 
+.topnav a {
+  display: block;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  padding: 7px 15px;
+}
+ 
+.target {
+  position: absolute;
+  border-bottom: 4px solid transparent;
+  z-index: -1;
+  transform: translateX(-60px);
+}
+ 
+.topnav a,
+.target {
+  transition: all .35s ease-in-out;
+}
+
+.inner-content {
+  padding: 17px;
+  width: 75%;
+  margin-left: 10%;
+  text-align: left;
+ 
+}
+.text {
+ background-color: #003366;
+ padding: 10px;
+ border-radius: 3px 3px 3px 3px;  /*rounded corners*/
+}
+
+/* formatting for legend/picture credits */
+.credit {
+  width: 500px;
+}
+.credit h3, p{
+  display: inline;
+}
+.credit a{
+  color: white;
+}
+
+
+/*quote generation -----------------------------------------------------------------*/
+
+#author {
+  color: orange;
+}
+
+.qSpan {
+  display: block;
+
+
+  margin-left: 5%;
+  font-family: "Georgia";
+
+  /*citation: transition effects from https://stackoverflow.com/questions/11660710/css-transition-fade-in */
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*carousel -------------------------------------------------------------------------*/
+ /*Citation code originally modified from:
+     https://medium.com/javascript-in-plain-english/writing-a-slider-in-
+     javascript-learning-web-development-in-practice-ea4862dce85a
+     */
+
+.carousel-wrapper {
+    max-width: 90%;
+    /* The position of the element is set relative to its original position: */
+    position: relative;
+    /* Center horizontally: */
+    margin: auto;
+    height: 300px;
+}
+
+/* The picture is scaled in relation to the parent element: */
+.carousel-wrapper .card img {
+    /* The element is resized to fill the block and maintain proportions: */
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+}
+
+/* left and right buttons: */
+.carousel-wrapper .left, .carousel-wrapper .right {
+    /* Adds an icon to the cursor when it is over the button: */
+    cursor: pointer;
+    /* The position of the element is set relative to the borders of the browser: */
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    /* Styling the buttons themselves: */
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    /* Background fading on hover: */
+    transition: 0.6s ease;
+    /* Rounding the borders: */
+    border-radius: 3px 3px 3px 3px;
+}
+
+.carousel-wrapper .left {
+    left: 40px;
+
+}
+.carousel-wrapper .right {
+    right: 0;
+}
+/* When you hover over the buttons, add the background of the buttons: */
+.carousel-wrapper .left:hover,
+.carousel-wrapper .right:hover {
+    background-color: darkgrey;
+}
+/* Slide animation: */
+.carousel-wrapper .card {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    /* Set and change the transparency: */
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/*-------------------------------------------------------------------------------------*/
+
+
+/*CSS specific to skyplan page */
+
+.box3 .form-container {
+  height:220px;
+  width:500px;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+}
+
+
+.box3 fieldset {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  float: left;
+  width:35%;
+  border: 0;
+  background-color: #003366;
+}
+
+
+.box3 form .submit {
+  width: 100%;
+  background-color: orange;
+}
+
+.box3 form #zip {
+  min-width: 100px;
+}
+
+
+/*CSS specific to info page -------------------------------------------------------------- */
+
+.info-wrapper .text {
+  width: 400px;
+  margin-bottom: 50px;
+}
+.resources {
+  max-height:100px;
+  margin:0;
+  overflow:auto;
+  padding:0;  /*override*/
+  text-indent:10px;
+
+}
+.info-wrapper a  {
+  color: white;
+}
+
+#images {
+  width: 100px;
+  background-color: orange;
+}
