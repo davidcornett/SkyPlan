@@ -44,7 +44,7 @@ function bindButton(){
   		}
 		
   		// PLACEHOLDER form submission to meet project requirements - TODO after CS290
-  		req.open('POST', 'http:httpbin.org/post',true);
+  		req.open('POST', 'https://httpbin.org/post',true);
     	req.setRequestHeader('Content-Type', 'application/json');
     	req.send(JSON.stringify(payload));
 
@@ -62,7 +62,7 @@ function bindButton(){
         console.log(response);
         setResults(response); // call function to set up new page with results
     } else {
-        console.log("Request Error: " + request.statusText); 
+        console.log("Request Error: " + req.statusText); 
     }
  }
 
